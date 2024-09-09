@@ -1,18 +1,19 @@
-import os
-import numpy as np
-from tqdm import tqdm
-from ai2thor.controller import Controller
-import random
-from PIL import Image
-from action import *
-import cv2
-import prior
-import pickle
-import torch
-import csv
 import argparse
-import time
+import csv
+import os
 import pdb
+import pickle
+import random
+import time
+
+import cv2
+import numpy as np
+import prior
+import torch
+from action import *
+from ai2thor.controller import Controller
+from PIL import Image
+from tqdm import tqdm
 
 
 def parse_arguments():
@@ -55,6 +56,7 @@ class MultiObjEnv:
             height=672,
             fieldOfView=90
         )
+        self.controller.start()
 
         self.dataset = prior.load_dataset("procthor-10k")
 
