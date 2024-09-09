@@ -56,7 +56,6 @@ class MultiObjEnv:
             height=672,
             fieldOfView=90
         )
-        self.controller.start()
 
         self.dataset = prior.load_dataset("procthor-10k")
 
